@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"log"
-	"time"
 
 	"github.com/laaksomavrick/microservices/pkg/amqp"
 )
@@ -18,7 +17,6 @@ var (
 	queueName    = flag.String("queue", "test-queue", "Ephemeral AMQP queue name")
 	bindingKey   = flag.String("bindingKey", "test-key", "AMQP binding key")
 	consumerTag  = flag.String("consumer-tag", "simple-consumer", "AMQP consumer tag (should not be blank)")
-	lifetime     = flag.Duration("lifetime", 5*time.Second, "lifetime of process before shutdown (0s=infinite)")
 )
 
 func main() {

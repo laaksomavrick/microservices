@@ -1,0 +1,3 @@
+github.com/laaksomavrick/microservices v0.0.0-20190310140837-4d1360fc2836 h1:j1iaTLhFyFuYZp9UUOqjlwwi2oS44Nfir48jDByIM2g=
+github.com/laaksomavrick/microservices v0.0.0-20190310140837-4d1360fc2836/go.mod h1:/Vbma9k/J7Nfv+uIvsCzjboaw0gwYZIAoAPZpVRnXck=
+github.com/streadway/amqp v0.0.0-20190225234609-30f8ed68076e/go.mod h1:1WNBiOZtZQLpVAyu0iTduoJL9hEsMloAK5XWrtW0xdY=
