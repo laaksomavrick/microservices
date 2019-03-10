@@ -25,7 +25,6 @@ func main() {
 	r.PathPrefix("/").HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode("catch all")
 	})
-
 	log.Printf("Serving on %d", *port)
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", *port), r))
 }
