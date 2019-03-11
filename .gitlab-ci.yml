@@ -19,4 +19,5 @@ build-api:
   - docker build -t $SERVICE_API_TAG_NAME -f services/api/Dockerfile ./services/api
   - docker push $SERVICE_API_TAG_NAME
   only:
-    - $CI_COMMIT_MESSAGE =~ /^\[build-api\]/
+    variables:
+      - $CI_COMMIT_MESSAGE =~ /^\[build-api\]/
