@@ -1,0 +1,20 @@
+image: docker:latest
+
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  SERVICE_API_TAG_NAME: registry.gitlab.com/laakso.mavrick/microservices/api:$CI_COMMIT_REF_NAME
+
+before_script:
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
+
+build-api:
+  script:
+  - mkdir docker-images
+  - docker build --pull -t $SERVICE_API_TAG_NAME -f services/api/Dockerfile .
+  - docker save $SERVICE_API_TAG_NAME > docker-images/app.tar
+  only:
+    - $CI_COMMIT_MESSAGE =~ /\[build-api\]/
