@@ -9,7 +9,7 @@ stages:
   - deploy
 
 variables:
-  SERVICE_API_TAG_NAME: registry.gitlab.com/laakso.mavrick/microservices/api:$CI_COMMIT_TAG
+  SERVICE_API_TAG_NAME: registry.gitlab.com/laakso.mavrick/microservices/api:$CI_COMMIT_SHA
 
 before_script:
   - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN registry.gitlab.com
